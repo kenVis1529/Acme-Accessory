@@ -17,7 +17,8 @@
 </div>
 <form action='processForm.php' method='post'>
     
-    <?php include 'menuOrder.html'; ?>
+    <?php include 'menuOrder.html'; //Thanh menu active nút Orderform
+    ?> 
     <div class='container'>
         <div class='panel panel-info'>
             <div class='panel-heading'>
