@@ -34,7 +34,8 @@
         <h2>Acme Accessory Sales</h2>
     </div>
 </div>
-<?php include 'menuProcess.html'; ?>
+<?php include 'menuProcess.html'; //Thanh menu active nút Process Form
+?>
 <div class='container'>
 <?php
 //- Cố truy cập processForm.php không thông qua orderForm.php:
