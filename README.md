@@ -2,4 +2,4 @@
 
 Mục đích: tạo hóa đơn từ thông tin của đơn hàng
 
-Trang chính: orderForm.php
+Main: orderForm.php
