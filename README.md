@@ -1,5 +1,4 @@
 # A3
 
-Mục đích: tạo hóa đơn từ thông tin của đơn hàng
+Mô tả: Bill Printer là một trang web đặt hàng và in ra hóa đơn.
 
-Main: orderForm.php
