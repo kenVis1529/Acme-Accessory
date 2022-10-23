@@ -9,11 +9,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <!--
-    - Cố truy cập processForm.php không thông qua orderForm.php:
-        + Đưa cho người dùng 1 link trở lại orderForm.php, 
-        + Hiện 1 tin nhắn rằng để mua thì cần phải điền trang orderForm.php.    
+    - Cố truy cập processForm.php không thông qua index.php:
+        + Đưa cho người dùng 1 link trở lại index.php, 
+        + Hiện 1 tin nhắn rằng để mua thì cần phải điền trang index.php.    
     - Kiểm tra: tên và số điện thoại đầy đủ, đặt ít nhất 1 mặt hàng (emty($_POST['quantity'])).
-        + Nếu không thõa, hiện link trở lại orderForm (<a href='orderForm.php'></a>)
+        + Nếu không thõa, hiện link trở lại index (<a href='index.php'></a>)
     - Tính toán: thành tiền chưa tính thuế, tiền thuế, tổng tiền phải trả, tổng thanh toán.\
     - Nếu tổng thanh toán trên 65$ thì miễn ship.
     - Trình bày: Thông tin người mua, thông tin đơn hàng, thành tiền chưa tính thuế, tiền thuế, tiền ship, tổng thanh toán và thời gian xử lý.
@@ -38,9 +38,9 @@
 ?>
 <div class='container'>
 <?php
-//- Cố truy cập processForm.php không thông qua orderForm.php:
-//  + Đưa cho người dùng 1 link trở lại orderForm.php (action='orderForm.php'), 
-//  + Hiện 1 tin nhắn rằng để mua thì cần phải điền trang orderForm.php.
+//- Cố truy cập processForm.php không thông qua index.php:
+//  + Đưa cho người dùng 1 link trở lại index.php (action='index.php'), 
+//  + Hiện 1 tin nhắn rằng để mua thì cần phải điền trang index.php.
 if (empty($_POST['name']) && empty($_POST['email']) && empty($_POST['pnumber']) && empty($_POST['i12_q']) && empty($_POST['i13_q']) && empty($_POST['sg_q']) && empty($_POST['gp_q'])){
     echo 
     "
@@ -50,7 +50,7 @@ if (empty($_POST['name']) && empty($_POST['email']) && empty($_POST['pnumber']) 
         </div>
         <div class='panel-body'>In order to buy something you need to fill out the Order Form page first.</div>
         <div class='panel-footer'>
-            <a href='orderForm.php' class='btn btn-default'>Back</a>
+            <a href='index.php' class='btn btn-default'>Back</a>
         </div>
     </div>
     ";
@@ -72,7 +72,7 @@ $tax_rate = 15;
 $delivery_amount = 5.00;
 
 //- Kiểm tra: tên, số điện thoại đầy đủ và đặt ít nhất 1 mặt hàng (emty($i12_quantity))
-//  + Nếu không thõa, hiện link trở lại orderForm (href='orderForm.php')
+//  + Nếu không thõa, hiện link trở lại index (href='index.php')
 $message = '';
 #Không đặt hàng
 if (empty($i12_quantity) && empty($i13_quantity) && empty($sg_quantity) && empty($gp_quantity)){
@@ -91,7 +91,7 @@ if ($message != ''){
         </div>
         <div class='panel-body'>$message</div>
         <div class='panel-footer'>
-            <a href='orderForm.php' class='btn btn-default'>Back</a>
+            <a href='index.php' class='btn btn-default'>Back</a>
         </div>
     </div>
     ";
