@@ -27,7 +27,7 @@
                 </form>
             </div>
             <div class='col-md-6 text-right'>
-                <form action='orderForm.php'>
+                <form action='index.php'>
                     <input type='submit' class='btn btn-secondary' value='Go to Order Form page'>
                 </form>
             </div>
